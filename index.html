@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style type="text/less">
+    @font-face {
+            font-family: MIFont;
+            src: url(./mi.woff);
+            font-weight: 400;
+        }
+        a {
+            text-decoration: none;
+        }
         body {
         margin: 0;
+        font-family: MIFont;
         font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
     }
         * {
@@ -38,16 +47,26 @@
                     margin: 0 0.3em;
                 }
                 div.top-right-menu {
+                    font-style: normal;
                     float: right;
                     div.shopping-cart {
                         float: right;
                         background-color: #424242;
                         width:120px;
                         margin-left:25px;
+                        
                         a {
+                            font-family: MIFont!important;
                             width:120px;
                             text-align: center;
                             display: inline-block;
+                            &::before {
+                            content: '\e60c';
+                            font-size:20px;
+                            line-height:20px;
+                            vertical-align:-4px;
+                            margin-right:4px;
+                        }
                         }
                     }
                     
