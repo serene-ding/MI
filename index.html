@@ -15,13 +15,14 @@
             text-decoration: none;
         }
         body {
-        margin: 0;
+        margin:0;
+        xmin-width: 1266px;
         font-family: MIFont;
         font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
     }
         * {
-            background-color: rgba(0,0,0,0.02);
-            box-shadow: 0 0 1px red;
+            xbackground-color: rgba(0,0,0,0.02);
+            xbox-shadow: 0 0 1px red;
         }
         ul {
             list-style: none;
@@ -53,7 +54,7 @@
                         float: right;
                         background-color: #424242;
                         width:120px;
-                        margin-left:25px;
+                        margin-left:22px;
                         
                         a {
                             font-family: MIFont!important;
@@ -65,7 +66,7 @@
                             font-size:20px;
                             line-height:20px;
                             vertical-align:-4px;
-                            margin-right:4px;
+                            margin-right:2px;
                         }
                         }
                     }
@@ -73,7 +74,219 @@
                 }
             }
         }
+        div.site-header{
+            
+            div.site-header-inner{
+                width: 1226px;
+                height: 100px;
+                margin:auto;
+                a.header-logo{
+                    float: left;
+                    margin-top:25px;
+                    
+                    img{
+                        width: 50px;
+                        height: 50px; 
+                        display:block;
+                    }
+                                   
+                }
+                ul.product-menu {
+                    margin-left: 185px;
+                    float: left;
+                    display: flex;
+                    font-size: 16px;
+                    li {
+                        a {
+                            padding: 0 10px  ;
+                            display: inline-block;
+                            height:100px;
+                            line-height:100px;
+                            color:black;
+                            font-size:16px;
+                            
+                        }
+                            
+                    }
+                }
+                .product-search {
+                    float:left;
+                    display: flex;
+                    margin-top:25px;
+                    input {
+                        outline: none;
+                        border:1px solid #e0e0e0;
+                        height:50px;
+                        margin-left:97px;
+                        border-right:none;
+                        width: 235px;
+                        
+                    }
+                    button {
+                        outline: none;
+                        border:1px solid #e0e0e0;
+                        width:50px;
+                        background-color: #fff;
+                        &::before{
+                            font-family: MIFont!important;
+                            content: '\e616';
+                            font-size:24px;
+                            color:#616161
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        
     }
+
+    .second-menu {
+        position: relative;
+        .slider {
+                position: relative;
+                width: 1226px;
+                height: 460px;
+                input {
+                    display: none;
+                }
+                .slides {
+                    .slide {
+                        position:absolute;
+                        label.prev {
+                            display:block;
+                            width: 46px;
+                            height: 69px;
+                            position:absolute;
+                            left:233px;
+                            top:0;
+                            bottom: 0;
+                            margin: auto;
+                            div.prev {
+                            
+                            width: 46px;
+                            height: 69px;
+                            background: url(//i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -84px 50%;
+                            &:hover {
+                                background-color: rgba(143, 126, 126,0.7);
+                                border-radius: 2px;
+                                }
+                            
+                            }
+                        }
+                        label.next {
+                            display:block;
+                            width: 46px;
+                            height: 69px;
+                            position:absolute;
+                            right: 0;
+                            top:0px;
+                            bottom: 0px;
+                            margin: auto;
+                            div.next {
+                            width: 46px;
+                            height: 69px;
+                            background:url(//i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -125px 50%;
+                            &:hover {
+                                background-color: rgba(143, 126, 126,0.7);    
+                            }
+                            }
+                        }   
+                            
+                        
+                        a {
+                            img {
+                                transition: 1s;
+                                opacity: 0;
+                                width:1226px;
+                                height:460px;
+                            }
+                        }
+                }
+                }
+                .indicator {
+                    display: flex;
+                    position: absolute;
+                    z-index:100;
+                    width:100px;
+                    right: 10px;
+                    bottom: 10px;
+                    justify-content: space-between;
+                    label {
+                        div {
+                        background-color: transparent;
+                        width:7px;
+                        height:7px;
+                        border:2px solid;
+                        border-radius:10px;
+                        &:active{
+                            background-color: #fff;
+                        }
+                        }
+                        
+                    }
+                }
+                input:nth-child(1):checked ~ .slides div:nth-child(1) a img,
+                input:nth-child(2):checked ~ .slides div:nth-child(2) a img,
+                input:nth-child(3):checked ~ .slides div:nth-child(3) a img,
+                input:nth-child(4):checked ~ .slides div:nth-child(4) a img,
+                {   
+                    opacity: 1;
+                }
+                input:nth-child(1):checked ~ .slides div:nth-child(1) label,
+                input:nth-child(2):checked ~ .slides div:nth-child(2) label,
+                input:nth-child(3):checked ~ .slides div:nth-child(3) label,
+                input:nth-child(4):checked ~ .slides div:nth-child(4) label,
+                {
+                    z-index: 50;
+                    div.prev {
+                        xz-index: 50;
+                        
+                    }
+                }
+                input:nth-child(1):checked ~ .indicator label:nth-child(1) div,
+                input:nth-child(2):checked ~ .indicator label:nth-child(2) div,
+                input:nth-child(3):checked ~ .indicator label:nth-child(3) div,
+                input:nth-child(4):checked ~ .indicator label:nth-child(4) div,
+                {
+                    background-color: #fff;
+                }
+                
+            }
+        div.side-menu {
+                color:white;
+                position: absolute;
+                top:0;
+                ul.product-list {
+                    width: 233px;
+                    height: 420px;
+                    padding:20px 0;
+                    background-color: rgba(105,101,101,.6);
+                    li {
+                        height: 42px;
+                        line-height: 42px;
+                        padding-left:30px;
+                        em{ 
+                            font-family: MIFont!important;
+                            font-style:normal;
+                            font-size:16px;
+                            position: absolute;
+                            right:20px;
+                            &:before {
+                            content: '\E623';
+                            }
+                        }
+                        &:hover {
+                            background-color: #ff6700;
+                        }
+                    }
+                }
+            }
+
+    }
+
+
     </style>
 </head>
 <body>
@@ -82,7 +295,7 @@
             <nav class="service">
                  <a><span>小米商城 </span></a> 
                  <span class = "sep">|</span>
-                 <a><span>MIUI </span></a> 
+            <a><span>MIUI </span></a> 
                  <span class = "sep">|</span>
                  <a><span>IoT </span></a> 
                  <span class = "sep">|</span>
@@ -121,6 +334,129 @@
                 </div>
             </nav>
         </header>
+    <div class="site-header">
+        <div class="site-header-inner">
+        <a class="header-logo" target="blank_" href="https://www.mi.com/index.html">
+            <img src="https://s02.mifile.cn/assets/static/image/logo-mi2.png" alt="">
+        </a>
+        <ul class="product-menu">
+            
+           
+          <li><a href="#">Xiaomi手机</a></li>
+          <li><a href="#">Redmi 红米</a></li>
+          <li><a href="#">电视</a></li>
+          <li><a href="#">笔记本</a></li>
+          <li><a href="#">平板</a></li>
+          <li><a href="#">家电</a></li>
+          <li><a href="#">路由器</a></li>
+          <li><a href="#">服务</a></li>
+          <li><a href="#">社区</a></li>
+        </ul>
+         <form class="product-search" action="https://www.mi.com/search">
+             <input type="text" name="keyword">
+             <button class="iconfont-search"></button>
+         </form>
+        </div>
+    </div>
+</div>
+
+<div class="second-menu">
+        <div class="slider">
+            <input checked type="radio" name="slide" id="img1">
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+            <input type="radio" name="slide" id="img4">
+            <div class="slides">
+            <div class="slide">
+                <label class= "prev" for="img4"><div class="prev"></div></label>
+                <label class= "next" for="img2"><div class="next"></div></label>
+                <a href="#">
+                    
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b3d1c941b152d5d41042f9c1e1b7509a.jpg?w=2452&h=920" alt="">
+
+                </a>
+            </div>
+            <div class="slide">
+                <label class= "prev" for="img1"><div class="prev"></div></label>
+                <label class= "next" for="img3"><div class="next"></div></label>
+                <a href="#">
+                    
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/19f12ce5a1770c2a23188f1055258967.jpg?thumb=1&w=2452&h=920&f=webp&q=90" alt="">
+
+                </a>
+            </div>
+            <div class="slide">
+                <label class= "prev" for="img2"><div class="prev"></div></label>
+                <label class= "next" for="img4"><div class="next"></div></label>
+                <a href="#">
+                    
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/918820682e4a490221cfd92b24c14b86.jpg?thumb=1&w=2452&h=920&f=webp&q=90" alt="">
+
+                </a>
+            </div>
+            <div class="slide">
+                <label class= "prev" for="img3"><div class="prev"></div></label>
+                <label class= "next" for="img1"><div class="next"></div></label>
+                <a href="#">
+                    
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6c149e20d569b96c0a99f62e5108ad29.jpg?thumb=1&w=2452&h=920&f=webp&q=90" alt="">
+
+                </a>
+            </div>
+            </div>
+            <div class="indicator">
+                <label for="img1"><div></div></label>
+                <label for="img2"><div></div></label>
+                <label for="img3"><div></div></label>
+                <label for="img4"><div></div></label>
+
+            </div>
+            
+        </div>
+        <div class="side-menu">
+            <ul class="product-list">
+                <li>
+                    手机
+                    <em></em>
+                    </li>
+                <li>
+                    电视
+                    <em></em>
+                    </li>
+                <li>
+                    笔记本 平板
+                    <em></em>
+                    </li>
+                <li>
+                    家电
+                    <em></em>
+                    </li>
+                <li>
+                    出行 穿戴
+                    <em></em>
+                    </li>
+                <li>
+                    智能 路由器
+                    <em></em>
+                    </li>
+                <li>
+                    电源 配件
+                    <em></em>
+                    </li>
+                <li>
+                    健康 儿童
+                    <em></em>
+                    </li>
+                <li>
+                    耳机 音箱
+                    <em></em>
+                    </li>
+                <li>
+                    笔记本 平板
+                    <em></em>
+                    </li>
+            </ul>
+        </div>
     </div>
 </body>
 <script src="less.min.js"></script>
