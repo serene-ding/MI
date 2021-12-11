@@ -92,11 +92,23 @@
                                    
                 }
                 ul.product-menu {
+                   
                     margin-left: 185px;
                     float: left;
                     display: flex;
                     font-size: 16px;
+                    
                     li {
+                        &:hover {
+                            a {
+                                color: #ff6700;
+                            }
+                            .dropdown-menu {
+                                height:233px;
+                                transition: 0.5s;
+                                border-top: 1px solid #e0e0e0;
+                            }
+                        }
                         a {
                             padding: 0 10px  ;
                             display: inline-block;
@@ -104,27 +116,82 @@
                             line-height:100px;
                             color:black;
                             font-size:16px;
-                            .dropdown-menu {
-                                position: absolute;
-                                height: 230px;
-                                width: 100%;
-                                background-color:rgb(206, 195, 195);
-                                z-index: 200;
-                                left: 0;
-                                ul {
-                                    width: 1226px;
-                                    height: 201px;
-                                    margin:auto;
-                                    background-color:rgb(159,207,69);
-                                    display:flex;
-                                    li {
-                                        width: calc(1226px / 6);
-                                        height: 201px;
-                                        background-color: rgb(62, 129, 92);
-                                    }
-                                }
-                            }  
                         }
+                        .dropdown-menu {
+                            box-sizing: border-box;
+                            border-top: 0px solid #e0e0e0;
+                            xdisplay: none;
+                            position: absolute;
+                            height: 0px;
+                            overflow: hidden;
+                            width: 100%;
+                            xbackground-color:rgb(184, 39, 39);
+                            background-color: #fff;
+                            z-index: 200;
+                            left: 0;
+                            ul {
+                                width: 1226px;
+                                height: 201px;
+                                margin:auto;
+                                background-color:white;
+                                display:flex;
+                                li {
+                                    width: 180px;
+                                    height: 166px;
+                                    xbox-shadow: 0 0 1px blue;
+                                    xbackground-color: rgb(229, 231, 108);
+                                    padding-top:35px;
+                                    padding-right: 12px;
+                                    padding-left: 12px;
+                                    &:not(.first)::before {
+                                        content: '';
+                                        position:absolute;
+                                        z-index: 201;
+                                        width: 1px;
+                                        height:100px;
+                                        top:35px;
+                                        background-color: #e0e0e0;
+                                    }
+                                    a {
+                                        width:180px;
+                                        height: 166px;
+                                        padding:0px;
+                                        display:block;
+                                        xbackground-color: lightpink;
+                                        .figure {
+                                            width: 160px;
+                                            height: 110px;
+                                            margin-top:0px;
+                                            margin-right:auto;
+                                            margin-left:auto;
+                                            margin-bottom:16px;
+                                            img {
+                                                    width: 160px;
+                                                    height: 110px;
+                                                    
+                                                }
+                                            }
+                                        .title {
+                                            font-size: 12px;
+                                            height: 20px;
+                                            line-height: 20px;
+                                            width: 100%;
+                                            color: #333;
+                                            text-align: center;
+                                        }
+                                        .price {
+                                            font-size: 12px;
+                                            height: 20px;
+                                            line-height: 20px;
+                                            width: 100%;
+                                            color: #ff6700;
+                                            text-align: center;
+                                        }
+                                    }
+                                }   
+                            }
+                        }  
+                        
                         
                             
                     }
@@ -367,67 +434,57 @@
         <ul class="product-menu">
             
            
-          <li><a href="#">Xiaomi手机
+          <li>
+              <a href="#">Xiaomi手机</a>
               <div class="dropdown-menu">
                 <ul>
+                  <li class="first">
+                     <a href="">
+                         <div class="figure"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=288&h=198&f=webp&q=90" alt=""></div>
+                         <div class="title">Xiaomi 11 青春活力版</div>
+                         <div class="price">2599元起</div>
+                     </a>
+                    </li>
                   <li>
-                    <a href="">
-                        <div class="figure">
-                            <img src="" alt="">
-                            </div>
-                        <div></div>
-                        <p></p>    
-                    </a>
-                  </li>
+                      <a href="">
+                          <div class="figure"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=288&h=198&f=webp&q=90" alt=""></div>
+                          <div class="title">Xiaomi 11 青春活力版</div>
+                          <div class="price">2599元起</div>
+                      </a>
+                    </li>
                   <li>
-                    <a href="">
-                        <div class="figure">
-                            <img src="" alt="">
-                            </div>
-                        <div></div>
-                        <p></p>    
-                    </a>
-                  </li>
+                      <a href="">
+                          <div class="figure"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=288&h=198&f=webp&q=90" alt=""></div>
+                          <div class="title">Xiaomi 11 青春活力版</div>
+                          <div class="price">2599元起</div>
+                      </a>
+                    </li>
                   <li>
-                    <a href="">
-                        <div class="figure">
-                            <img src="" alt="">
-                            </div>
-                        <div></div>
-                        <p></p>    
-                    </a>
-                  </li>
+                      <a href="">
+                          <div class="figure"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=288&h=198&f=webp&q=90" alt=""></div>
+                          <div class="title">Xiaomi 11 青春活力版</div>
+                          <div class="price">2599元起</div>
+                      </a>
+                    </li>
                   <li>
-                    <a href="">
-                        <div class="figure">
-                            <img src="" alt="">
-                            </div>
-                        <div></div>
-                        <p></p>    
-                    </a>
-                  </li>
+                      <a href="">
+                          <div class="figure"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=288&h=198&f=webp&q=90" alt=""></div>
+                          <div class="title">Xiaomi 11 青春活力版</div>
+                          <div class="price">2599元起</div>
+                      </a>
+                    </li>
                   <li>
-                    <a href="">
-                        <div class="figure">
-                            <img src="" alt="">
-                            </div>
-                        <div></div>
-                        <p></p>    
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                        <div class="figure">
-                            <img src="" alt="">
-                            </div>
-                        <div></div>
-                        <p></p>    
-                    </a>
-                  </li>
+                      <a href="">
+                          <div class="figure"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=288&h=198&f=webp&q=90" alt=""></div>
+                          <div class="title">Xiaomi 11 青春活力版</div>
+                          <div class="price">2599元起</div>
+                      </a>
+                    </li> 
                 </ul>
               </div>
               
-          </a></li>
+          
+            </li>
           <li><a href="#">Redmi 红米</a></li>
           <li><a href="#">电视</a></li>
           <li><a href="#">笔记本</a></li>
